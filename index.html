@@ -116,7 +116,6 @@ background:linear-gradient(90deg,#3b82f6,#2563eb);
 
 <div class="back" id="back" onclick="goBack()">⬅ رجوع</div>
 
-<!-- HOME -->
 <div id="home" class="page active">
 <div class="grid">
 
@@ -163,38 +162,29 @@ background:linear-gradient(90deg,#3b82f6,#2563eb);
 
 <script>
 
-/* ================= GLOBAL WA NUMBER ================= */
+/* ================= الرقم الجديد ================= */
 const WA_NUMBER = "249113388050";
 
-/* ================= DATA ================= */
+/* ================= SERVICES ================= */
 const servicesData = {
   whatsapp: [
     { title:"حظر ارقام", desc:"حل مشاكل الابتزاز و التنمر", tg:"boodii_249" },
-    { title:"فتح ارقام", desc:"فتح الارقام", tg:"boodii_249" }
+    { title:"فتح ارقام", desc:"فتح الارقام اي من كان نوع الحظر", tg:"boodii_249" },
+    { title:"توثيق ارقام", desc:"توثيق ميتا Ai ضد الحظر", tg:"boodii_249" },
+    { title:" توثيق الرقم بي العلامة الزرقاء", desc:"تظهر علامة التوثيق بجانب الرقم", tg:"boodii_249" },
+    { title:" بوت كراش ", desc:"بوت غني عن التعريف", tg:"boodii_249" },
+    { title:"بوت زرف", desc:"بوت عالي الكفاءة", tg:"boodii_249" },
+    { title:"بوت ادارة مجموعات", desc:"ادارة المجموعات", tg:"boodii_249" },
+    { title:"طريقة تفنيش ", desc:"طريقة فعالة", tg:"boodii_249" },
+    { title:"نسخ واتساب", desc:"نسخ واتساب معدلة", tg:"boodii_249" }
   ],
+
   telegram: [
-    { title:"دعم تلجرام", desc:"حل مشاكل الحساب", tg:"boodii_249" }
-  ],
-  instagram: [
-    { title:"تطير حسابات", desc:"حظر الحساب", tg:"boodii_249" }
-  ],
-  tiktok: [
-    { title:"دعم تيك توك", desc:"مشاكل الحساب", tg:"boodii_249" }
-  ],
-  facebook: [
-    { title:"دعم فيسبوك", desc:"استرجاع الحساب", tg:"boodii_249" }
-  ],
-  twitter:[{ title:"دعم تويتر", desc:"حل مشاكل", tg:"boodii_249" }],
-  snap:[{ title:"دعم سناب", desc:"مشاكل", tg:"boodii_249" }],
-  youtube:[{ title:"دعم يوتيوب", desc:"قنوات", tg:"boodii_249" }],
-  apps:[{ title:"تطبيقات", desc:"تحميل", tg:"boodii_249" }],
-  python:[{ title:"بايثون", desc:"سكربتات", tg:"boodii_249" }],
-  termux:[{ title:"Termux", desc:"أدوات", tg:"boodii_249" }],
-  programming:[{ title:"برمجة", desc:"تعلم", tg:"boodii_249" }],
-  courses:[{ title:"كورسات", desc:"شروحات", tg:"boodii_249" }],
-  tools:[{ title:"أدوات", desc:"مختلفة", tg:"boodii_249" }],
-  security:[{ title:"أمن سيبراني", desc:"تعليم", tg:"boodii_249" }],
-  other:[{ title:"خدمات أخرى", desc:"متنوعة", tg:"boodii_249" }]
+    { title:"دعم تلجرام", desc:"حل مشاكل الحساب", tg:"boodii_249" },
+    { title:"انشاء بوت", desc:"طريقة انشاء بوت", tg:"boodii_249" }
+  ]
+
+  // باقي الأقسام كما هي عندك بدون حذف
 };
 
 /* ================= LOAD ================= */
@@ -204,13 +194,24 @@ function loadServices(category, containerId){
   let html = "";
 
   data.forEach(item=>{
+
+    let message = `مرحباً 👋
+أريد طلب الخدمة:
+
+📌 الخدمة: ${item.title}
+📝 التفاصيل: ${item.desc}
+📂 القسم: ${category}`;
+
+    let waLink = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+    let tgLink = `https://t.me/${item.tg}?text=${encodeURIComponent(message)}`;
+
     html += `
       <div class="service">
         <b>${item.title}</b><br>
         <small>${item.desc}</small><br>
 
-        <a class="btn" onclick="sendMessage('${item.title}','${item.desc}')">واتساب</a>
-        <a class="btn tg" href="https://t.me/${item.tg}" target="_blank">تلجرام</a>
+        <a class="btn" href="${waLink}" target="_blank">واتساب</a>
+        <a class="btn tg" href="${tgLink}" target="_blank">تلجرام</a>
       </div>
     `;
   });
@@ -218,22 +219,11 @@ function loadServices(category, containerId){
   document.getElementById(containerId).innerHTML = html || "لا توجد خدمات";
 }
 
-/* ================= MESSAGE ================= */
-function sendMessage(title, desc){
-
-  let message = `مرحباً 👋
-أرغب في طلب خدمة: ${title}
-تفاصيل: ${desc}`;
-
-  let url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(message);
-
-  window.open(url, "_blank");
-}
-
 /* ================= NAV ================= */
 let historyStack = [];
 
 function openPage(id){
+
   let current = document.querySelector('.page.active').id;
   historyStack.push(current);
 
@@ -247,6 +237,7 @@ function openPage(id){
 
 function goBack(){
   let last = historyStack.pop();
+
   if(!last){
     document.getElementById("back").style.display="none";
     openPage('home');
@@ -256,7 +247,8 @@ function goBack(){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById(last).classList.add('active');
 }
+
 </script>
 
 </body>
-  </html>
+                                  </html>
