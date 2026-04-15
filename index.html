@@ -109,32 +109,6 @@ background:linear-gradient(90deg,#3b82f6,#2563eb);
 
 <body>
 
-<header>
-<div class="logo">NEXORA SHOOP</div>
-<div class="dev">𝐃𝐄𝐕  𝐀𝐁𝐎𝐎𝐃𝐈</div>
-</header>
-
-<div class="back" id="back" onclick="goBack()">⬅ رجوع</div>
-
-<!-- HOME 16 CATEGORIES -->
-<div id="home" class="page active">
-<div class="grid">
-<h2>اختر الخدمة</h2>
-
-<select id="service" onchange="generateMessage()">
-  <option value="">-- اختر الخدمة --</option>
-  <option value="استرجاع حساب واتساب">واتساب</option>
-  <option value="مشكلة حساب تلجرام">تلجرام</option>
-  <option value="استرجاع حساب فري فاير">فري فاير</option>
-</select>
-
-<div id="msgBox" style="margin-top:10px;padding:10px;border:1px solid #ccc;">
-  الرسالة ستظهر هنا
-</div>
-
-<button onclick="sendWhatsApp()" style="margin-top:10px;">
-  إرسال واتساب
-</button>
 <div class="card" onclick="openPage('whatsapp')"><i class="fab fa-whatsapp"></i><br>واتساب</div>
 <div class="card" onclick="openPage('telegram')"><i class="fab fa-telegram"></i><br>تلجرام</div>
 <div class="card" onclick="openPage('instagram')"><i class="fab fa-instagram"></i><br>انستغرام</div>
@@ -177,35 +151,7 @@ background:linear-gradient(90deg,#3b82f6,#2563eb);
 <div id="other" class="page"><div id="otherList"></div></div>
 
 <script>
-<script>
-let message = "";
 
-/* 👇 هذا يشتغل عند اختيار الخدمة */
-function generateMessage() {
-  let service = document.getElementById("service").value;
-
-  if (!service) {
-    message = "";
-    document.getElementById("msgBox").innerText = "الرسالة ستظهر هنا";
-    return;
-  }
-
-  // 🔥 توليد تلقائي حسب الاختيار
-  message = "مرحباً، أحتاج مساعدة في " + service;
-
-  document.getElementById("msgBox").innerText = message;
-}
-
-/* 👇 إرسال واتساب */
-function sendWhatsApp() {
-  if (!message) return;
-
-  let phone = "213553240538";
-  let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
-
-  window.open(url, "_blank");
-}
-</script>
 /* ================= SERVICES ================= */
 const servicesData = {
   whatsapp: [
