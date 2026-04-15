@@ -116,7 +116,6 @@ background:linear-gradient(90deg,#3b82f6,#2563eb);
 
 <div class="back" id="back" onclick="goBack()">⬅ رجوع</div>
 
-<!-- HOME 16 CATEGORIES -->
 <div id="home" class="page active">
 <div class="grid">
 
@@ -125,314 +124,38 @@ background:linear-gradient(90deg,#3b82f6,#2563eb);
 <div class="card" onclick="openPage('instagram')"><i class="fab fa-instagram"></i><br>انستغرام</div>
 <div class="card" onclick="openPage('tiktok')"><i class="fab fa-tiktok"></i><br>تيك توك</div>
 
-<div class="card" onclick="openPage('facebook')"><i class="fab fa-facebook"></i><br>فيسبوك</div>
-<div class="card" onclick="openPage('twitter')"><i class="fab fa-x-twitter"></i><br>تويتر</div>
-<div class="card" onclick="openPage('snap')"><i class="fab fa-snapchat"></i><br>سناب شات</div>
-<div class="card" onclick="openPage('youtube')"><i class="fab fa-youtube"></i><br>يوتيوب</div>
-
-<div class="card" onclick="openPage('apps')"><i class="fas fa-mobile"></i><br>تطبيقات</div>
-<div class="card" onclick="openPage('python')"><i class="fab fa-python"></i><br>Python</div>
-<div class="card" onclick="openPage('termux')"><i class="fas fa-terminal"></i><br>Termux</div>
-<div class="card" onclick="openPage('programming')"><i class="fas fa-code"></i><br>برمجة</div>
-
-<div class="card" onclick="openPage('courses')"><i class="fas fa-book"></i><br>كورسات</div>
-<div class="card" onclick="openPage('tools')"><i class="fas fa-toolbox"></i><br>أدوات</div>
-<div class="card" onclick="openPage('security')"><i class="fas fa-shield-alt"></i><br>أمن سيبراني</div>
-<div class="card" onclick="openPage('other')"><i class="fas fa-star"></i><br>أخرى</div>
-
 </div>
 </div>
 
-<!-- PAGES -->
 <div id="whatsapp" class="page"><div id="whatsappList"></div></div>
 <div id="telegram" class="page"><div id="telegramList"></div></div>
 <div id="instagram" class="page"><div id="instagramList"></div></div>
 <div id="tiktok" class="page"><div id="tiktokList"></div></div>
-<div id="facebook" class="page"><div id="facebookList"></div></div>
-<div id="twitter" class="page"><div id="twitterList"></div></div>
-<div id="snap" class="page"><div id="snapList"></div></div>
-<div id="youtube" class="page"><div id="youtubeList"></div></div>
-<div id="apps" class="page"><div id="appsList"></div></div>
-<div id="python" class="page"><div id="pythonList"></div></div>
-<div id="termux" class="page"><div id="termuxList"></div></div>
-<div id="programming" class="page"><div id="programmingList"></div></div>
-<div id="courses" class="page"><div id="coursesList"></div></div>
-<div id="tools" class="page"><div id="toolsList"></div></div>
-<div id="security" class="page"><div id="securityList"></div></div>
-<div id="other" class="page"><div id="otherList"></div></div>
 
 <script>
 
-/* ================= SERVICES ================= */
+/* ================= GLOBAL NUMBER ================= */
+const WA_NUMBER = "249113388050";
+
+/* ================= DATA ================= */
 const servicesData = {
   whatsapp: [
-    { title:"حظر ارقام", desc:"حل مشاكل الابتزاز و التنمر", wa:"213553240538", tg:"boodii_249" },
-    { title:"فتح ارقام", desc:"فتح الارقام اي من كان نوع الحظر", wa:"213553240538", tg:"boodii_249" },
- {
-  title: "توثيق ارقام",
-  desc: "توثيق ميتا Ai ضد الحظر",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: " توثيق الرقم بي العلامة الزرقاء",
-  desc: "تظهر علامة التوثيق بجانب الرقم و يكون تحت تميز من شركة واتساب",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: " بوت كراش ",
-  desc: "بوت غني عن التعريف اقل خدمة منه كفيلة ",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "بوت زرف",
-  desc: "بوت غني عن التعريف يعمل بكفاةٔ عالية و سرعة استجابة",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "بوت ادارة مجموعات",
-  desc: "بوت كفيل بي ادارة المجموعات يتميز بسرعة استجابة عالية",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "طريقة تفنيش ",
-  desc: "طريقة فعالة و كفيلة بتطير الرقم من بلاغ الى 5",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "نسخ واتساب",
-  desc: "نسخ واتساب معدلة",
-  wa: "213553240538",
-  tg: "boodii_249"
-}
+    { title:"اسبام ارقام", desc:"حل مشاكل الابتزاز و التنمر" },
+    { title:"فتح ارقام", desc:"فتح الارقام اي من كان نوع الحظر" },
+    { title:"توثيق ارقام", desc:"توثيق ميتا Ai ضد الحظر" }
   ],
 
   telegram: [
-    { title:"دعم تلجرام", desc:"حل مشاكل الحساب", wa:"213553240538", tg:"boodii_249" },
-  {
-  title: "انشاء بوت",
-  desc: "طريقة انشاء بوت تلجرام بكامل حقوقك",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "بوت ارقام عالمية",
-  desc: "بوت في ارقام مميزة جداً تقبل التوثيق",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-  {
-  title: "تطير قروبات و قنوات",
-  desc: "طريقة مضمونة و مجربة ",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "طريقة قلب حسابك انتحالي",
-  desc: "3 طرق مضمونة",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "تفعيل تلجرام مميز",
-  desc: "مميزات تلجرام جميعاً في نسخة واحدة",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "تطير بوتات",
-  desc: "طريقة تطير بوتات مضمونة",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "حماية حسابك من الاختراق",
-  desc: "اسرع طريقة للحماية في هاذا الاصدار",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "اكواد محظورة",
-  desc: "اكواد مفيدة جداً في هاذا المجال",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "كود فك حظر",
-  desc: "كود سريع لي الغاء حظر رقمك على تلجرام",
-  wa: "213553240538",
-  tg: "boodii_249"
-}
+    { title:"دعم تلجرام", desc:"حل مشاكل الحساب" },
+    { title:"انشاء بوت", desc:"طريقة انشاء بوت تلجرام" }
   ],
 
-
   instagram: [
-    { title:"تطير حسابات", desc:"حظر الحساب في اقل من 30 دقيق", wa:"213553240538", tg:"boodii_249" },
-    {
-  title: "بايـو مـلـغـم",
-  desc: "غني عن التعريف",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "توثيق حسابات",
-  desc: "طريقة توثيق حساب انستا",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "رفع الحظر عن الحسابات",
-  desc: "طريقة مضمونة لي استرجاع حسابك",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "اكسبلور#",
-  desc: "غني عن التعريف",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "حسابات قديمة",
-  desc: "حسابات قديمة مرغوبة جداً",
-  wa: "213553240538",
-  tg: "boodii_249"
-}
+    { title:"تطير حسابات", desc:"حظر الحساب" }
   ],
 
   tiktok: [
-    { title:"دعم تيك توك", desc:"مشاكل الحساب", wa:"213553240538", tg:"boodii_249" },
-    {
-  title: "توثيق حسابك",
-  desc: "الطريقة الوحيدة",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "تطير حسابات",
-  desc: "من الصعب توفر الثغرة للعلم",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "تكبيس لايف",
-  desc: "ثقرة تكبيس نار",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "استرجاع حسابات",
-  desc: "طريقة حديثة",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "كود تطير بث",
-  desc: "تطير بثوث حصري",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "رابط الشركة",
-  desc: "رابط شركة تيك توك",
-  wa: "213553240538",
-  tg: "boodii_249"
-}
-  ],
-
-  facebook: [
-    { title:"دعم فيسبوك", desc:"استرجاع الحساب", wa:"213553240538", tg:"boodii_249" },
-    {
-  title: "شرح اخفاء الاسم",
-  desc: "اخفاء الاسم بي اسهل طريقة",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "استعادة الحسابات المحزوفة",
-  desc: "طريقة استرجاع حديثة",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "كود تطير حسابات",
-  desc: "حظر حسابات",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "تطير قروبات",
-  desc: "اغلاق قروبات عبر ثغرة حديثة",
-  wa: "213553240538",
-  tg: "boodii_249"
-},
-{
-  title: "اكسبلور",
-  desc: "غني عن التعريف",
-  wa: "213553240538",
-  tg: "boodii_249"
-}
-  ],
-
-  twitter: [
-    { title:"دعم تويتر", desc:"حل مشاكل الحساب", wa:"213553240538", tg:"boodii_249" }
-  ],
-
-  snap: [
-    { title:"دعم سناب", desc:"مشاكل الحساب", wa:"213553240538", tg:"boodii_249" }
-  ],
-
-  youtube: [
-    { title:"دعم يوتيوب", desc:"قنوات ومشاكل", wa:"213553240538", tg:"boodii_249" }
-  ],
-
-  apps: [
-    { title:"تطبيقات مدفوعة", desc:"تحميل تطبيقات", wa:"213553240538", tg:"boodii_249" }
-  ],
-
-  python: [
-    { title:"سكربتات بايثون", desc:"أدوات جاهزة", wa:"213553240538", tg:"boodii_249" }
-  ],
-
-  termux: [
-    { title:"أدوات Termux", desc:"أوامر وأدوات", wa:"213553240538", tg:"boodii_249" },
-    {
-  title: "اوامر مهمة",
-  desc: "ضروري تكون عندك",
-  wa: "213553240538",
-  tg: "boodii_249"
-}
-  ],
-
-  programming: [
-    { title:"تعلم البرمجة", desc:"دروس وأكواد", wa:"213553240538", tg:"boodii_249" }
-  ],
-
-  courses: [
-    { title:"كورسات", desc:"شروحات كاملة", wa:"213553240538", tg:"boodii_249" }
-  ],
-
-  tools: [
-    { title:"أدوات", desc:"أدوات مختلفة", wa:"213553240538", tg:"boodii_249" }
-  ],
-
-  security: [
-    { title:"أمن سيبراني", desc:"تعليم وحماية", wa:"213553240538", tg:"boodii_249" }
-  ],
-
-  other: [
-    { title:"خدمات أخرى", desc:"متنوعة", wa:"213553240538", tg:"boodii_249" },
-    {
-  title: "كـالـي لـيـنـكـس",
-  desc: "كل ما يخص عالم كالي لـيـنـكـس",
-  wa: "213553240538",
-  tg: "boodii_249"
-}
+    { title:"دعم تيك توك", desc:"مشاكل الحساب" }
   ]
 };
 
@@ -448,13 +171,24 @@ function loadServices(category, containerId){
         <b>${item.title}</b><br>
         <small>${item.desc}</small><br>
 
-        <a class="btn" href="https://wa.me/${item.wa}" target="_blank">واتساب</a>
-        <a class="btn tg" href="https://t.me/${item.tg}" target="_blank">تلجرام</a>
+        <a class="btn" onclick="sendMessage('${item.title}','${item.desc}')">واتساب</a>
       </div>
     `;
   });
 
   document.getElementById(containerId).innerHTML = html || "لا توجد خدمات";
+}
+
+/* ================= MESSAGE SYSTEM ================= */
+function sendMessage(title, desc){
+
+  let message = `مرحباً 👋
+أرغب في طلب خدمة: ${title}
+تفاصيل: ${desc}`;
+
+  let url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
 }
 
 /* ================= NAV ================= */
@@ -489,4 +223,4 @@ function goBack(){
 </script>
 
 </body>
-                                                                                    </html>
+</html>
