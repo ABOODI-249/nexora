@@ -142,7 +142,6 @@ background:linear-gradient(90deg,#3b82f6,#2563eb);
 </div>
 </div>
 
-<!-- PAGES -->
 <div id="whatsapp" class="page"><div id="whatsappList"></div></div>
 <div id="telegram" class="page"><div id="telegramList"></div></div>
 <div id="instagram" class="page"><div id="instagramList"></div></div>
@@ -162,29 +161,107 @@ background:linear-gradient(90deg,#3b82f6,#2563eb);
 
 <script>
 
-/* ================= الرقم الجديد ================= */
+/* ================= الرقم الموحد ================= */
 const WA_NUMBER = "249113388050";
 
-/* ================= SERVICES ================= */
+/* ================= الخدمات (كما هي بدون حذف) ================= */
 const servicesData = {
   whatsapp: [
     { title:"حظر ارقام", desc:"حل مشاكل الابتزاز و التنمر", tg:"boodii_249" },
     { title:"فتح ارقام", desc:"فتح الارقام اي من كان نوع الحظر", tg:"boodii_249" },
     { title:"توثيق ارقام", desc:"توثيق ميتا Ai ضد الحظر", tg:"boodii_249" },
-    { title:" توثيق الرقم بي العلامة الزرقاء", desc:"تظهر علامة التوثيق بجانب الرقم", tg:"boodii_249" },
-    { title:" بوت كراش ", desc:"بوت غني عن التعريف", tg:"boodii_249" },
+    { title:"توثيق الرقم بي العلامة الزرقاء", desc:"تظهر علامة التوثيق بجانب الرقم", tg:"boodii_249" },
+    { title:"بوت كراش", desc:"بوت غني عن التعريف", tg:"boodii_249" },
     { title:"بوت زرف", desc:"بوت عالي الكفاءة", tg:"boodii_249" },
     { title:"بوت ادارة مجموعات", desc:"ادارة المجموعات", tg:"boodii_249" },
-    { title:"طريقة تفنيش ", desc:"طريقة فعالة", tg:"boodii_249" },
+    { title:"طريقة تفنيش", desc:"طريقة فعالة", tg:"boodii_249" },
     { title:"نسخ واتساب", desc:"نسخ واتساب معدلة", tg:"boodii_249" }
   ],
 
   telegram: [
     { title:"دعم تلجرام", desc:"حل مشاكل الحساب", tg:"boodii_249" },
-    { title:"انشاء بوت", desc:"طريقة انشاء بوت", tg:"boodii_249" }
-  ]
+    { title:"انشاء بوت", desc:"طريقة انشاء بوت", tg:"boodii_249" },
+    { title:"بوت ارقام عالمية", desc:"بوت ارقام مميزة", tg:"boodii_249" },
+    { title:"تطير قروبات", desc:"طريقة مضمونة", tg:"boodii_249" },
+    { title:"طريقة قلب حسابك انتحالي", desc:"3 طرق مضمونة", tg:"boodii_249" },
+    { title:"تفعيل تلجرام مميز", desc:"مميزات كاملة", tg:"boodii_249" },
+    { title:"تطير بوتات", desc:"طريقة مضمونة", tg:"boodii_249" },
+    { title:"حماية حسابك", desc:"اسرع طريقة للحماية", tg:"boodii_249" },
+    { title:"اكواد محظورة", desc:"اكواد مفيدة", tg:"boodii_249" },
+    { title:"كود فك حظر", desc:"فك الحظر", tg:"boodii_249" }
+  ],
 
-  // باقي الأقسام كما هي عندك بدون حذف
+  instagram: [
+    { title:"تطير حسابات", desc:"حظر الحساب", tg:"boodii_249" },
+    { title:"بايو ملغم", desc:"غني عن التعريف", tg:"boodii_249" },
+    { title:"توثيق حسابات", desc:"طريقة التوثيق", tg:"boodii_249" },
+    { title:"رفع الحظر", desc:"استرجاع الحساب", tg:"boodii_249" },
+    { title:"اكسبلور", desc:"محتوى", tg:"boodii_249" },
+    { title:"حسابات قديمة", desc:"حسابات مرغوبة", tg:"boodii_249" }
+  ],
+
+  tiktok: [
+    { title:"دعم تيك توك", desc:"مشاكل الحساب", tg:"boodii_249" },
+    { title:"توثيق حسابك", desc:"طريقة التوثيق", tg:"boodii_249" },
+    { title:"استرجاع حسابات", desc:"طريقة حديثة", tg:"boodii_249" },
+    { title:"كود تطير بث", desc:"تطير بثوث", tg:"boodii_249" },
+    { title:"تكبيس لايف", desc:"لايف", tg:"boodii_249" },
+    { title:"رابط الشركة", desc:"رابط تيك توك", tg:"boodii_249" }
+  ],
+
+  facebook: [
+    { title:"دعم فيسبوك", desc:"استرجاع الحساب", tg:"boodii_249" },
+    { title:"اخفاء الاسم", desc:"طريقة", tg:"boodii_249" },
+    { title:"استعادة الحسابات", desc:"استرجاع", tg:"boodii_249" },
+    { title:"تطير قروبات", desc:"اغلاق", tg:"boodii_249" },
+    { title:"اكسبلور", desc:"محتوى", tg:"boodii_249" }
+  ],
+
+  twitter: [
+    { title:"دعم تويتر", desc:"حل مشاكل", tg:"boodii_249" }
+  ],
+
+  snap: [
+    { title:"دعم سناب", desc:"مشاكل", tg:"boodii_249" }
+  ],
+
+  youtube: [
+    { title:"دعم يوتيوب", desc:"قنوات", tg:"boodii_249" }
+  ],
+
+  apps: [
+    { title:"تطبيقات", desc:"تحميل", tg:"boodii_249" }
+  ],
+
+  python: [
+    { title:"بايثون", desc:"سكربتات", tg:"boodii_249" }
+  ],
+
+  termux: [
+    { title:"Termux", desc:"أدوات", tg:"boodii_249" },
+    { title:"أوامر مهمة", desc:"مهم", tg:"boodii_249" }
+  ],
+
+  programming: [
+    { title:"برمجة", desc:"تعلم", tg:"boodii_249" }
+  ],
+
+  courses: [
+    { title:"كورسات", desc:"شروحات", tg:"boodii_249" }
+  ],
+
+  tools: [
+    { title:"أدوات", desc:"أدوات", tg:"boodii_249" }
+  ],
+
+  security: [
+    { title:"أمن سيبراني", desc:"تعلم", tg:"boodii_249" }
+  ],
+
+  other: [
+    { title:"خدمات أخرى", desc:"متنوعة", tg:"boodii_249" },
+    { title:"كالي لينكس", desc:"كل شيء", tg:"boodii_249" }
+  ]
 };
 
 /* ================= LOAD ================= */
@@ -197,13 +274,11 @@ function loadServices(category, containerId){
 
     let message = `مرحباً 👋
 أريد طلب الخدمة:
-
 📌 الخدمة: ${item.title}
-📝 التفاصيل: ${item.desc}
-📂 القسم: ${category}`;
+📝 التفاصيل: ${item.desc}`;
 
     let waLink = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
-    let tgLink = `https://t.me/${item.tg}?text=${encodeURIComponent(message)}`;
+    let tgLink = `https://t.me/${item.tg}`;
 
     html += `
       <div class="service">
@@ -223,7 +298,6 @@ function loadServices(category, containerId){
 let historyStack = [];
 
 function openPage(id){
-
   let current = document.querySelector('.page.active').id;
   historyStack.push(current);
 
@@ -247,8 +321,7 @@ function goBack(){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById(last).classList.add('active');
 }
-
 </script>
 
 </body>
-                                  </html>
+                                                                                                </html>
